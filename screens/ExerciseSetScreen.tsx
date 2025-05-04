@@ -96,7 +96,7 @@ export default function ExerciseSetScreen({ route, navigation }: any) {
               placeholder="Weight"
               placeholderTextColor="#777"
               keyboardType="numeric"
-              value={currentWeight}
+              value={currentWeight == "0" ? "" : currentWeight}
               onChangeText={setCurrentWeight}
             />
             <TextInput
@@ -104,7 +104,7 @@ export default function ExerciseSetScreen({ route, navigation }: any) {
               placeholder="Reps"
               placeholderTextColor="#777"
               keyboardType="numeric"
-              value={currentReps}
+              value={currentReps == "0" ? "" : currentReps}
               onChangeText={setCurrentReps}
             />
           </View>

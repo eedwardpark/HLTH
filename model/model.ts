@@ -17,7 +17,6 @@ export interface Workout {
     id?: number;
     userID: number; // user id
     startTime: string;
-    endTime?: string;
     notes?: string;
 }
 
