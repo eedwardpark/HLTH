@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { 
-  View, 
-  Text, 
-  TouchableOpacity, 
-  StyleSheet, 
-  SafeAreaView, 
-  ScrollView, 
-} from 'react-native';
-import { Workout } from '../model/models';
-
+import React, { useState, useEffect } from "react";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  SafeAreaView,
+  ScrollView,
+} from "react-native";
+import { Workout } from "../model/models";
 
 export default function HomeScreen({ navigation }: any) {
   const startWorkout = () => {
@@ -16,9 +15,9 @@ export default function HomeScreen({ navigation }: any) {
       id: 1234,
       userID: 1,
       startTime: new Date().toISOString(),
-      notes: ''
+      notes: "",
     };
-    navigation.navigate('Workout', { workout: newWorkout });
+    navigation.navigate("Workout", { workout: newWorkout });
   };
 
   return (
@@ -26,7 +25,7 @@ export default function HomeScreen({ navigation }: any) {
       <ScrollView style={styles.scrollView}>
         <View style={styles.content}>
           <Text style={styles.title}>🏋️ HLTH</Text>
-          
+
           <TouchableOpacity style={styles.startButton} onPress={startWorkout}>
             <Text style={styles.startButtonText}>Start Workout</Text>
           </TouchableOpacity>
@@ -50,22 +49,22 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 36,
-    fontWeight: 'bold',
-    textAlign: 'center',
+    fontWeight: "bold",
+    textAlign: "center",
     marginTop: 40,
     marginBottom: 40,
   },
   startButton: {
     borderRadius: 10,
     padding: 20,
-    alignItems: 'center',
+    alignItems: "center",
     marginHorizontal: 20,
     marginBottom: 40,
     borderWidth: 1,
-    borderColor: '#333',
+    borderColor: "#333",
   },
   startButtonText: {
     fontSize: 22,
-    fontWeight: 'bold',
-  }
+    fontWeight: "bold",
+  },
 });
