@@ -13,7 +13,7 @@ export default function WorkoutScreen({ navigation, route }: any) {
   const currentWorkout = route.params.workout;
   const selectExercise = () => {
     if (currentWorkout) {
-      navigation.navigate("ExerciseSelect", { workout: currentWorkout });
+      navigation.navigate("SelectExercise", { workout: currentWorkout });
     } else {
       Alert.alert(
         "No workout started",
